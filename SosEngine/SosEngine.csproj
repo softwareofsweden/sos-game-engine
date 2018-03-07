@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>905b6b3b-33b1-49fb-b691-ae30f88cb4f5</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SosEngine</RootNamespace>
+    <AssemblyName>SosEngine.Desktop</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>DesktopGL</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Debug</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimatedSprite.cs" />
+    <Compile Include="AnimationFrame.cs" />
+    <Compile Include="BitmapFont.cs" />
+    <Compile Include="BounceTileEffect.cs" />
+    <Compile Include="ConsoleWindow.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="Drawing2D.cs" />
+    <Compile Include="Editor.cs" />
+    <Compile Include="GameScene.cs" />
+    <Compile Include="IConsoleCommand.cs" />
+    <Compile Include="Input.cs" />
+    <Compile Include="Level.cs" />
+    <Compile Include="LevelObject.cs" />
+    <Compile Include="ModPlayer.cs" />
+    <Compile Include="MouseCursor.cs" />
+    <Compile Include="Replay.cs" />
+    <Compile Include="SaveDataManager.cs" />
+    <Compile Include="SceneManager.cs" />
+    <Compile Include="Sprite.cs" />
+    <Compile Include="SpriteFrame.cs" />
+    <Compile Include="SpriteFrameCache.cs" />
+    <Compile Include="SpriteGroup.cs" />
+    <Compile Include="StringHelper.cs" />
+    <Compile Include="TextBox.cs" />
+    <Compile Include="TextLabel.cs" />
+    <Compile Include="TileAnimation.cs" />
+    <Compile Include="TileAnimationDefinition.cs" />
+    <Compile Include="TileEffect.cs" />
+    <Compile Include="Tasks\ActionTask.cs" />
+    <Compile Include="Tasks\FrameSpriteTask.cs" />
+    <Compile Include="Tasks\PositionSpriteTask.cs" />
+    <Compile Include="Tasks\ScaleSpriteTask.cs" />
+    <Compile Include="Tasks\SleepTask.cs" />
+    <Compile Include="Tasks\Task.cs" />
+    <Compile Include="Tasks\TaskSequence.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tasks\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XTiled\XTiled.csproj">
+      <Project>{46DA6A2B-32E2-41C1-A3D6-B82FF51C15D4}</Project>
+      <Name>XTiled</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
