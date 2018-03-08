@@ -14,7 +14,7 @@ namespace Mario.Scenes
         protected SosEngine.BitmapFont font;
         private SosEngine.Level level;
         private Hud hud;
-        private Editor editor;
+        private SosEngine.Editor editor;
         private EntityManager entityManager;
         private Player player;
         private Texture2D background;
@@ -101,7 +101,7 @@ namespace Mario.Scenes
             //
             // Editor
             //
-            editor = new Editor(game, level);
+            editor = new SosEngine.Editor(game, level);
             editor.Visible = true;
 
             gameComponents.Add(level);

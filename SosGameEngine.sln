@@ -1,13 +1,18 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Mario.MacOS", "Example.Mario\Example.Mario.MacOS.csproj", "{3A23AA06-840E-4419-9CA5-6CA6A633EB1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Demo.MacOS", "Example.Demo\Example.Demo.MacOS.csproj", "{3A23AA06-840E-4419-9CA5-6CA6A633EB1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XTiled", "XTiled\XTiled.csproj", "{46DA6A2B-32E2-41C1-A3D6-B82FF51C15D4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XTiledExtensions", "XTiledExtensions\XTiledExtensions.csproj", "{6390EC22-9444-49D6-89BF-E2B67B8711E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SosEngine", "SosEngine\SosEngine.csproj", "{905B6B3B-33B1-49FB-B691-AE30F88CB4F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A8FB50B1-6C74-4D9F-B689-C5470494148A}"
+	ProjectSection(SolutionItems) = preProject
+		SosGameEngine.sln = SosGameEngine.sln
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
