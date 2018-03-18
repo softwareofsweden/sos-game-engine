@@ -112,6 +112,24 @@ namespace SosEngine
             */
         }
 
+        public bool IsWall(int block)
+        {
+            // TODO: Implement this!
+            return false;
+        }
+
+        public bool IsGround(int block)
+        {
+            // TODO: Implement this!
+            return false;
+        }
+
+        public bool IsJumpThrough(int block)
+        {
+            // TODO: Implement this!
+            return false;
+        }
+
         public string GetCustomProperty(string name)
         {
             if (map.Properties.ContainsKey(name))

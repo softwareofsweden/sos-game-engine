@@ -261,6 +261,15 @@ namespace SosEngine
             return SpriteFrameCache.GetSpriteFrame(frameName);
         }
 
+        public static void LoadSpritesheet(string assetName, int w, int h, int count)
+        {
+            Core.LoadTexture(assetName);
+            for (int i = 0; i < count; i++)
+            {
+                Core.SpriteFrameCache.AddSpriteFrame(new SpriteFrame(assetName, assetName + "_" + i.ToString(), new Rectangle(w * i, 0, w, h)));
+            }
+        }
+
         /// <summary>
         /// Load Effect from content.
         /// </summary>

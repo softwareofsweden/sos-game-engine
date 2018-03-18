@@ -2,24 +2,12 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Example_Demo.MacOS.Objects;
 
 namespace Example_Demo.MacOS.Scenes
 {
-    public class PlayScene : SosEngine.GameScene
+    public class PlatformerScene : SosEngine.GameScene
     {
-
-        /// <summary>
-        /// The player.
-        /// </summary>
-        protected Player player;
-
-        /// <summary>
-        /// The level.
-        /// </summary>
-        private SosEngine.Level level;
-
-        public PlayScene(Game game)
+        public PlatformerScene(Game game)
             : base(game)
         {
 
@@ -43,7 +31,7 @@ namespace Example_Demo.MacOS.Scenes
 
 
 
-        }
+        }    
 
         protected override void Dispose(bool disposing)
         {
@@ -68,9 +56,12 @@ namespace Example_Demo.MacOS.Scenes
 
             // Change speed depending on what type of ground player is walking on
             var block = level.GetBlockAtPixel("Block", (int)Math.Round(player.Position.X), (int)Math.Round(player.Position.Y));
-            if (block == 15 || block == 16 || block == 35 || block == 36) {
+            if (block == 15 || block == 16 || block == 35 || block == 36)
+            {
                 player.Speed = 2;
-            } else {
+            }
+            else
+            {
                 player.Speed = 1;
             }
 
@@ -88,6 +79,5 @@ namespace Example_Demo.MacOS.Scenes
             base.Draw(gameTime);
             SosEngine.Core.GetBitmapFont("font").PrintCenter("HELLO WORLD", 160, 20);
         }
-
     }
 }

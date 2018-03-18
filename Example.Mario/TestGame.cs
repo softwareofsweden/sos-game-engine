@@ -39,9 +39,8 @@ namespace Mario
             SosEngine.Core.Init(this, 320, 240, false); // Init Game Engine
             Helpers.ContentHelper.LoadAllContent();
             //SosEngine.Core.GetShader("Scanlines").Parameters["ImageHeight"].SetValue(graphics.GraphicsDevice.Viewport.Height);
-            // SosEngine.Core.SceneManager.SwitchScene(new Scenes.MenuScene(this));
-
-            SosEngine.Core.SceneManager.SwitchScene(new Scenes.PlayScene(this, "Level01"));
+            SosEngine.Core.SceneManager.SwitchScene(new Scenes.MenuScene(this));
+            //SosEngine.Core.SceneManager.SwitchScene(new Scenes.PlayScene(this, "Level01"));
             SosEngine.Core.ModPlayer.PlayMusic("Mario.Music.wk_maria.xm");
         }
 

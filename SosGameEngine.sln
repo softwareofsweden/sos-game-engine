@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Demo.MacOS", "Example.Demo\Example.Demo.MacOS.csproj", "{3A23AA06-840E-4419-9CA5-6CA6A633EB1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Mario.MacOS", "Example.Mario\Example.Mario.MacOS.csproj", "{3A23AA06-840E-4419-9CA5-6CA6A633EB1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XTiled", "XTiled\XTiled.csproj", "{46DA6A2B-32E2-41C1-A3D6-B82FF51C15D4}"
 EndProject

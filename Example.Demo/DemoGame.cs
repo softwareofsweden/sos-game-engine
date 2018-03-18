@@ -52,6 +52,7 @@ namespace Example_Demo.MacOS
             SosEngine.Core.LoadTexture("terrainTiles_default");
             SosEngine.Core.LoadTexture("george"); // 4 x 4 (48x48 pixels)
             SosEngine.Core.LoadTexture("Editor");
+            SosEngine.Core.LoadTexture("font");
 
             SosEngine.Core.SpriteFrameCache.AddSpriteFrame(new SosEngine.SpriteFrame("george", "down_0", new Rectangle(48 * 0, 48 * 0, 48, 48)));
             SosEngine.Core.SpriteFrameCache.AddSpriteFrame(new SosEngine.SpriteFrame("george", "down_1", new Rectangle(48 * 0, 48 * 1, 48, 48)));
@@ -73,9 +74,24 @@ namespace Example_Demo.MacOS
             SosEngine.Core.SpriteFrameCache.AddSpriteFrame(new SosEngine.SpriteFrame("Editor", "mouse_pointer", new Rectangle(0, 0, 32, 32)));
             SosEngine.Core.SpriteFrameCache.AddSpriteFrame(new SosEngine.SpriteFrame("Editor", "mouse_grab", new Rectangle(32, 0, 32, 32)));
 
+            // 33 x 32
+            // payer-run 6
+            // player-climb 3
+            // player - crouch 2
+            // player-hurt 2
+            // player - idle 4
+            // player-jump 2
+            SosEngine.Core.LoadSpritesheet("player-run", 33, 32, 6);
+
+
             // Create start scene
 
             SosEngine.Core.SceneManager.SwitchScene(new Scenes.PlayScene(this));
+
+
+            SosEngine.Core.LoadBitmapFont("font", 10, 10, "| !\"#$%&'()*+,-./0123456789:;<=>? ||||||||||||||||*_^|||||||½|||||ABCDEFGHIJKLMNOPQRSTUVWXYZ[£]||");
+            SosEngine.Core.GetBitmapFont("font").CharSpacing = 8;
+
 
         }
 

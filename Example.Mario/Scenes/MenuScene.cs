@@ -14,11 +14,13 @@ namespace Mario.Scenes
         public MenuScene(Game game)
             : base(game, "Level01")
         {
+            /*
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             using (System.IO.Stream stream = assembly.GetManifestResourceStream("Mario.Resources.mario.rec"))
             {
                 replay = new SosEngine.Replay(stream);
             }
+            */
 
             BackgroundColor = new Color(0, 0, 80);
 
